@@ -6,6 +6,7 @@ const items = require('../assets/data');
 
 exports.handler = async (event, context) => {
   return {
+    headers: { 'Access-Control-Allow-Origin': '*' },
     statusCode: 200,
     // body: 'Our Basic API EXAMPLE',
     // body: items, // Your function response must have a string body. You gave: [object Object],[object Object]
