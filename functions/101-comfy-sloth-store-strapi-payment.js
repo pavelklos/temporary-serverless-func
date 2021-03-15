@@ -24,6 +24,7 @@ exports.handler = async function (event, context) {
         currency: 'usd',
       });
       return {
+        headers: { 'Access-Control-Allow-Origin': '*' },
         statusCode: 200,
         // body: 'STRIPE (Netlify Serverless Function) 101-comfy-sloth-store-strapi-payment',
         // body: JSON.stringify({ cart, shipping_fee, total_amount }),
@@ -31,6 +32,7 @@ exports.handler = async function (event, context) {
       };
     } catch (error) {
       return {
+        headers: { 'Access-Control-Allow-Origin': '*' },
         statusCode: 500,
         body: JSON.stringify({ msg: error.message }),
       };
@@ -39,6 +41,7 @@ exports.handler = async function (event, context) {
 
   // FOR [GET] WITHOUT 'body'
   return {
+    headers: { 'Access-Control-Allow-Origin': '*' },
     statusCode: 200,
     body:
       'STRIPE (Netlify Serverless Function) 101-comfy-sloth-store-strapi-payment',

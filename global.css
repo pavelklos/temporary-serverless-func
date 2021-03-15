@@ -20,6 +20,7 @@ Variables
   --clr-primary-4: #544dd9;
   /* primary/main color */
   --clr-primary-5: hsl(243, 100%, 68%);
+  --clr-primary-5-light: rgba(100, 92, 255, 0.1);
   /* lighter shades of primary color */
   --clr-primary-6: hsl(243, 100%, 73%);
   --clr-primary-7: hsl(243, 100%, 77%);
@@ -52,6 +53,7 @@ Variables
   --max-width: 1170px;
   --fixed-width: 620px;
 }
+
 /*
 =============== 
 Global Styles
@@ -141,7 +143,12 @@ p {
 }
 /*  global classes */
 
-/* section */
+/*
+=============== 
+Section
+===============
+*/
+
 .section {
   padding: 5rem 0;
 }
@@ -156,11 +163,13 @@ p {
     width: 95vw;
   }
 }
+
 /*
 =============== 
 Navbar
 ===============
 */
+
 .nav {
   height: 5rem;
   display: flex;
@@ -189,6 +198,7 @@ Navbar
 Examples
 ===============
 */
+
 .title {
   margin-bottom: 2rem;
 }
@@ -203,7 +213,23 @@ Examples
   margin-bottom: 0.75rem;
   text-transform: capitalize;
 }
-
 .examples a:hover {
   color: var(--clr-primary-3);
+}
+
+/* ADDED */
+.examples li {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--clr-primary-5-light);
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+.examples li b {
+  color: var(--clr-red-dark);
+  margin-left: 0.25rem;
+  border: 2px solid var(--clr-red-dark);
+  padding: 0.05rem 0.2rem;
+  opacity: 0.75;
+  font-size: 0.75rem;
 }

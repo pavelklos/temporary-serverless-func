@@ -24,6 +24,7 @@ exports.handler = (event, context, cb) => {
   console.log('███ context.clientContext ███', context.clientContext);
 
   cb(null, {
+    headers: { 'Access-Control-Allow-Origin': '*' },
     statusCode: 200,
     body: 'Our First Netlify Function Example [with callback] ' + date,
     // body: person, // 500 Internal Server Error : Your function response must have a string body. You gave: [object Object]
