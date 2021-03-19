@@ -17,7 +17,9 @@
     <!-- examples section -->
     <section class="section section-center examples">
       <h1>netlify serverless functions</h1>
-      <h3 class="title">Examples</h3>
+      <h3 class="title">
+        Examples : Client IP = <span id="clientIp" class="clientIp"></span>
+      </h3>
       <ul class="examples">
         <li>
           <a href="./examples/1-hello/index.html">hello world</a>
@@ -37,7 +39,7 @@
             >airtable (PRODUCTS) <b>API GET</b><b>LIST-RETRIEVE</b></a
           > -->
           <a href="./api/003-z-complete" target="_blank"
-            >airtable (PRODUCTS) <b>API GET</b><b>LIST</b></a
+            >airtable (PRODUCTS) <b>API GET</b><b class="method">LIST</b></a
           >
         </li>
         <li>
@@ -45,11 +47,15 @@
             >airtable (PRODUCT)</a
           >
           <a href="./api/003-z-complete?id=recrant2u2MiI2IJy" target="_blank"
-            >airtable (PRODUCT) <b>API GET</b><b>RETRIEVE</b></a
+            >airtable (PRODUCT) <b>API GET</b><b class="method">RETRIEVE</b></a
           >
         </li>
         <li>
           <a href="./examples/4-survey/index.html">Survey</a>
+          <a href="./api/004-survey" target="_blank"
+            >Survey<b>API GET</b><b class="method">LIST</b><b>API PUT</b
+            ><b class="method">UPDATE</b></a
+          >
         </li>
         <li>
           <a href="./examples/5-weather/index.html">Open Weather API</a>
@@ -66,4 +72,16 @@
       </ul>
     </section>
   </body>
+  <script type="application/javascript">
+    function getIP(json) {
+      // document.write('My public IP address is: ', json.ip);
+      // document.write(`Client IP address is: <b>${json.ip}</b>`);
+      document.getElementById('clientIp').innerText = json.ip;
+      console.log('Client IP:', json.ip);
+    }
+  </script>
+  <script
+    type="application/javascript"
+    src="https://api.ipify.org?format=jsonp&callback=getIP"
+  ></script>
 </html>

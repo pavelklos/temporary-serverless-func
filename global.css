@@ -233,3 +233,22 @@ Examples
   opacity: 0.75;
   font-size: 0.75rem;
 }
+.examples li b.method {
+  color: var(--clr-primary-3);
+  border: 2px solid var(--clr-primary-3);
+}
+.serverIp {
+  color: var(--clr-red-dark);
+}
+.clientIp {
+  color: var(--clr-green-dark);
+}
+.ip {
+  font-family: 'consolas';
+  font-weight: normal;
+  margin-bottom: 0;
+  text-align: left;
+}
+.vote {
+  border: 1px solid var(--clr-primary-5-light);
+}

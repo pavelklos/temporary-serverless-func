@@ -27,6 +27,14 @@
     <!-- content -->
     <section class="section section-center content">
       <div class="title">
+        <div style="margin-bottom: 2rem">
+          <h4 class="ip">
+            Server IP = <span id="serverIp" class="serverIp"></span>
+          </h4>
+          <h4 class="ip">
+            Client IP = <span id="clientIp" class="clientIp"></span>
+          </h4>
+        </div>
         <h2>Survey</h2>
         <div class="title-underline"></div>
         <h4>Most important room in the house?</h4>
@@ -40,5 +48,17 @@
       crossorigin="anonymous"
     ></script>
     <script src="./app.js"></script>
+    <script type="application/javascript">
+      function getIP(json) {
+        // document.write('My public IP address is: ', json.ip);
+        // document.write(`Client IP address is: <b>${json.ip}</b>`);
+        document.getElementById('clientIp').innerText = json.ip;
+        console.log('Client IP:', json.ip);
+      }
+    </script>
+    <script
+      type="application/javascript"
+      src="https://api.ipify.org?format=jsonp&callback=getIP"
+    ></script>
   </body>
 </html>
