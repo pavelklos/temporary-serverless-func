@@ -20,6 +20,7 @@ exports.handler = async (event, context, cb) => {
   const method = event.httpMethod;
   const body = event.body;
   console.log({ method, body });
+  console.log('█ 004-survey █', { method, body });
 
   // [GET]
   if (method === 'GET') {
